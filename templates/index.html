@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Interactive Drum Kit Web App">
+
+  <title>Drum Kit</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+
+  <h1 id="title">Drum 🥁 Kit</h1>
+
+  <main class="set">
+
+    <button class="w drum" aria-label="Tom 1">w</button>
+    <button class="a drum" aria-label="Tom 2">a</button>
+    <button class="s drum" aria-label="Tom 3">s</button>
+    <button class="d drum" aria-label="Tom 4">d</button>
+    <button class="j drum" aria-label="Snare">j</button>
+    <button class="k drum" aria-label="Crash">k</button>
+    <button class="l drum" aria-label="Kick">l</button>
+
+  </main>
+
+  <footer>
+    Made with ❤️ in London.
+  </footer>
+
+  <!-- JS (Always before closing body) -->
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+</body>
+</html>

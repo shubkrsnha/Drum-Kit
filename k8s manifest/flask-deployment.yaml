@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-drum-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-drum
+  template:
+    metadata:
+      labels:
+        app: flask-drum
+    spec:
+      containers:
+      - name: flask-drum-container
+        image: rolex2k/flask-drum-app:latest
+        ports:
+        - containerPort: 5001
